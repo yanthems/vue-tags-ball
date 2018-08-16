@@ -4,16 +4,13 @@
 create a 3d tags ball for vue
 
 ## Demo
----
 
 [demo]()
 
----
 ## Install
 ```
 npm install --save vue_tags_ball
 ```
----
 ## Usage
 ```javascript
 //Gobal method
@@ -27,12 +24,10 @@ components: {
     "tags-ball":TagsBall
   },
 ```
----
 ## Example
 ```html
 <tags-ball v-bind:style="{border:'2px solid black'}" :width="200" :tags="tags"/>
 ```
----
 ## Props
 | Property | Type    | Description                    | Default       |
 | -------- | ------- | ------------------------------ | ------------- |
