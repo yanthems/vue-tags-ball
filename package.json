@@ -1,0 +1,27 @@
+{
+  "name": "vue_tags_ball",
+  "version": "1.0.0",
+  "description": "a 3d tags ball for vue2",
+  "main": "src/TagsBall.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanthems/vue_tags_ball.git"
+  },
+  "keywords": [
+    "vue",
+    "3d",
+    "tags"
+  ],
+  "author": "yanthems@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanthems/vue_tags_ball/issues"
+  },
+  "homepage": "https://github.com/yanthems/vue_tags_ball#readme",
+  "dependencies": {
+    "color": "^3.0.0"
+  }
+}
