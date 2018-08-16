@@ -38,4 +38,4 @@ components: {
 | radius   | Number  | init the ball radius           | 100           |
 | font     | String  | init the tag's label font      | "24px monaco" |
 | fontMax  | Number  | init the tag's label max width | 60            |
-| color    | String  | init the label's color         | #fc8457       |
+| color    | String  | init the label's color         | "#fc8457"     |
