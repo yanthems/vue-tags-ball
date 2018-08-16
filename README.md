@@ -9,7 +9,7 @@ create a 3d tags ball for vue
 
 ## Install
 ```
-npm install --save vue_tags_ball
+npm install --save vue-tags-ball
 ```
 ## Usage
 ```javascript
