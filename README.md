@@ -26,7 +26,7 @@ components: {
 ```
 ## Example
 ```html
-<tags-ball v-bind:style="{border:'2px solid black'}" :width="200" :tags="tags"/>
+<tags-ball v-bind:style='{"border":"2px solid black"}' :width="200" :tags="tags"/>
 ```
 ## Props
 | Property | Type    | Description                    | Default       |
