@@ -5,7 +5,7 @@ create a 3d tags ball for vue
 
 ## Demo
 
-[demo]()
+[demo](https://test.fuckneusoft.com/)
 
 ## Install
 ```
