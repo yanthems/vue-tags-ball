@@ -99,60 +99,17 @@ export default {
         this.z = z;
       };
       function create() {
-        let alpha = Math.sqrt(1 - 8.0 / (count + 3));
-        function getm(a) {
-          return Math.sqrt(
-            Math.pow(a.x, 2) + Math.pow(a.y, 2) + Math.pow(a.z, 2)
-          );
-        }
-
-        function getv3cos(a, b) {
-          let t1 = a.x * b.x + a.y * b.y + a.z * b.z;
-          let t2 = getm(a) * getm(b);
-          return t1 / t2;
-        }
-
-        function general() {
-          let p = new ve3(
-            Math.random() - 0.5,
-            Math.random() - 0.5,
-            Math.random() - 0.5
-          );
-          let pm = getm(p);
-          p.x = p.x * (Radius / pm);
-          p.y = p.y * (Radius / pm);
-          p.z = p.z * (Radius / pm);
-          return p;
-        }
-        let template = [];
-        template.push(new ve3(Radius, 0, 0));
-        template.push(new ve3(-Radius, 0, 0));
-        template.push(new ve3(0, Radius, 0));
-        template.push(new ve3(0, -Radius, 0));
-        template.push(new ve3(0, 0, Radius));
-        template.push(new ve3(0, 0, -Radius));
-        if (count <= 6) {
-          for (let i = 0; i < count; i++) {
-            points.push(template[i]);
-          }
-        } else {
-          for (; points.length < count; ) {
-            let v = general();
-            if (points.length == 0) {
-              points.push(v);
-            }
-            // console.log(points.length)
-            let success = true;
-            for (let i = 0; i < points.length; i++) {
-              if (getv3cos(v, points[i]) > alpha) {
-                success = false;
-                break;
-              }
-            }
-            if (success) {
-              points.push(v);
-            }
-          }
+        //golden cut 
+        //ref: https://zhuanlan.zhihu.com/p/25988652
+        //soucre: https://stackoverflow.com/questions/9600801/evenly-distributing-n-points-on-a-sphere/26127012#26127012
+        const gold=(Math.sqrt(5.0)-1)/2
+        for(let i=1;i<=count;i++){
+          let z=(2*i-1)/count-1
+          let x=Math.sqrt(1-Math.pow(z,2))*Math.cos(2*Math.PI*i*gold)
+          let y=Math.sqrt(1-Math.pow(z,2))*Math.sin(2*Math.PI*i*gold)
+          let p=new ve3(x,y,z)
+          points.push(p.resize(Radius))
+          // console.log(p.x,p.y,p.z)
         }
       }
       create();
