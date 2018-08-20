@@ -1,7 +1,7 @@
-# TagsBall
+# VueTagsBall
 
 ## Description
-create a 3d tags ball for vue
+create a 3d tags ball for vue2
 
 ## Demo
 
@@ -26,8 +26,12 @@ components: {
 ```
 ## Example
 ```html
-<tags-ball v-bind:style='{"border":"2px solid black"}' :width="200" :tags="tags"/>
+<tags-ball v-bind:style='{"border":"2px solid black"}' :width='200' :tags='tags'/>
 ```
+`tags` is a String[],like `{"tag1","tag2","tag3"}`.and you can bind your own style.
+
+Warning: just watching the `tags` and `stop`,other props only init.
+
 ## Props
 | Property | Type    | Description                    | Default       |
 | -------- | ------- | ------------------------------ | ------------- |
