@@ -98,6 +98,20 @@ export default {
         this.y = y;
         this.z = z;
       };
+      ve3.prototype={
+         getm:function() {
+          return Math.sqrt(
+            Math.pow(this.x, 2) + Math.pow(this.y, 2) + Math.pow(this.z, 2)
+          );
+        },
+        resize:function(R){
+          let pm = this.getm();
+          this.x = this.x * (R / pm);
+          this.y = this.y * (R / pm);
+          this.z = this.z * (R / pm);
+          return this
+        }
+      }
       function create() {
         //golden cut 
         //ref: https://zhuanlan.zhihu.com/p/25988652
