@@ -1,6 +1,6 @@
 {
   "name": "vue-tags-ball",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a 3d tags ball for vue2",
   "main": "src/TagsBall.vue",
   "scripts": {
