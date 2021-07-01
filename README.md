@@ -5,7 +5,7 @@ create a 3d tags ball for vue2
 
 ## Demo
 
-[demo](https://test.fuckneusoft.com/)
+[demo](https://test.yanthems.com/)
 
 ## Install
 ```
